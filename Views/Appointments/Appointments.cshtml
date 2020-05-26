@@ -3,9 +3,9 @@
 @{
     ViewBag.Title = "Index";
 }
-<h2>Index</h2>
+<center><h2>Welcome to Patient Appointments page of ABC Hospital</h2></center>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add Appointment for new Patient", "Create")
 </p>
 <p>
     Today's appointment count: @ViewBag.count
@@ -24,7 +24,9 @@
         <th>
             @Html.DisplayNameFor(model => model.HealthProblem)
         </th>
-        <th></th>
+        <th>
+            Manage Patient Appointments
+        </th>
     </tr>
     @foreach (var item in Model)
     {
