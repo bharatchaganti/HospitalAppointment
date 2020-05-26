@@ -28,19 +28,24 @@
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PatientName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DoctorName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AppointmentDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HealthProblem)
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PatientName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DoctorName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AppointmentDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HealthProblem)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.PatientId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.PatientId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.PatientId })
+    </td>
+</tr>
     }
 </table>
